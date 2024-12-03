@@ -8,6 +8,7 @@ FILE * fileIn;
 FILE * fileOut;
 
 void substituteCharacter( char * word, int index ) {
+    // rules
     switch( word[ index ] ) {
         case 'a':
             word[ index ] = '@';
@@ -69,7 +70,6 @@ void filter( char word[] ) {
                 substituteCharacter( copy, set[ j ] );
             }
         }
-        //printf( "%s", copy );
         fputs( copy, fileOut );
     }
 }
